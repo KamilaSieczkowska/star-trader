@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gra online Gwiezdny Kupiec">
+    <link rel="stylesheet" type="text/css" href="/static/css/stage3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+    <title> Gwiezdny Kupiec - pohandlujmy </title>
+</head>
+
+<body>
+
+<section>
+	<span id="ramka">
+			<h1 id="h1"> Jesteś na planecie {{actual_planet}}- pohandlujmy! </h1>
+		
+			<div class="towary">
+
+				<form  action="" method="POST" >
+                    {% csrf_token %}
+					<p style="color: springgreen">Twoja kasa: 
+                    {{ player_money }} </p>
+
+                    {% for p in products_onboard %}
+					<p>{{ p.product}} 
+                    <input class='prod' name="{{p.product}}" type="number" value='{{ p.quantity}}'> </p>
+                    {% endfor %}
+					<options='disable'>
+                    
+                    <input type="submit" class="button" style="width: 100%; margin-left: 0" value="DALEJ">
+				</form>
+                   <p style="color: springgreen"> Zajęta przestrzeń w ładowni: 
+                    {{ actual_capacity}} </p>
+			</div>
+		
+
+
+			<div class="towary">
+				<p style="color: lightblue">Cennik towarów na planecie: </p>
+
+				  {%for p in product_prices%}
+                  
+				   <p> {{ p.product}}                       
+
+                    <input   value='{{ p.actual_price}}'> </p>
+                    <p  style="color: springgreen;font-size: 12px" >
+                    {% endfor %}   
+                                    Miejsce w ładowni:
+             {% for pr in products_all%}
+               {{pr.product_name}}: {{pr.how_many_space}} 
+                    {% endfor %}    </p>             
+			</div>
+                
+            
+	</span>
+ 
+</section>
+
+
+<div id="stopka">
+<footer>
+  <p> Copywrights by <a target="blank" href="https://github.com/sermarcel"> Marcin Brz </a> </p>
+</footer>
+</div>
+
+
+</body>
+
+
+</html>
