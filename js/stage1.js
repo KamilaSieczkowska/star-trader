@@ -30,11 +30,6 @@ $(this).replaceWith($your_discription)
 $your_discription.fadeIn('slow')
 
 
-.mouseleave(function(){
-    $(this).replaceWith($your_ship)
-    $(this).fadeOut('slow')
-    $your_discription.replaceWith($ship_clone)
+})
+})
 
-})
-})
-})

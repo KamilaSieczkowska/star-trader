@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
     <meta name="viewport" static/content="width=device-width, initial-scale=1">
     <meta name="description" static/content="Gra online Gwiezdny Kupiec">
-    <link rel="stylesheet" type="text/css" href="/static/css/stage2.css">
+    <link rel="stylesheet" type="text/css" href="css/stage2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type='text/javascript' src='/static/js/jquery.circulate.js'></script>
-    <script type='text/javascript' src='/static/js/jquery.easing.1.2.js'></script>
-    <script type='text/javascript' src='/static/js/stage2.js'></script>
+    <script type='text/javascript' src='js/jquery.circulate.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.2.js'></script>
+    <script type='text/javascript' src='js/stage2.js'></script>
 
 
 	<title> Gwiezdny Kupiec - wybierz planetę </title>
@@ -20,55 +20,39 @@
 <body>
 
 
-<video playsinline autoplay muted loop poster="/static/content/bg_image.jpg" id="bgvideo">
-    <source src="/static/content/bg_video.mp4" type="video/mp4">
+<video playsinline autoplay muted loop poster="content/bg_image.jpg" id="bgvideo">
+    <source src="content/bg_video.mp4" type="video/mp4">
 </video>
 
-<div id="ramka" data-planet ='{{actual_planet}}'>
+<section id="ramka" data-planet ='{{actual_planet}}'>
     <div id="tekst">
       <p> Wybierz planetę: </p>
     </div>
 
-   <div id="bilans" >
-     <p> Aktualnie jesteś na: {{actual_planet}}</p>
-     <p>Runda: {{stage}}</p>
-   </div>
-
     <span>
       <div class="obok">
-        <img src="/static/content/planeta1.png" id="Krypton" data-id='1' height="70%" class="planety">
+        <a href="stage3.html"><img src="content/planeta1.png" id="KRYPTON" data-id='1' height="70%" class="planety"></a>
       </div>
 
       <div class="obok">    
-        <img src="/static/content/planeta2.png" id="Solaris" data-id='2' height="100%" class="planety">
+         <a href="stage3.html"><img src="content/planeta2.png" id="SOLARIS" data-id='2' height="90%" class="planety"></a>
       </div>      
 
       <div class="obok">   
-        <img src="/static/content/planeta3.png" id="Genezis" data-id='3' height="80%" class="planety">
+        <a href="stage3.html"><img src="content/planeta3.png" id="GENEZIS" data-id='3' height="80%" class="planety"></a>
       </div>
 
       <div class="obok">
-        <img src="/static/content/planeta4.png" id="Pandora" data-id='4' height="70%" class="planety">
+         <a href="stage3.html"><img src="content/planeta4.png" id="HELIOPOLIS" data-id='4' height="70%" class="planety"></a>
       </div>      
 
-     <!-- 
-     <div class="obok">
-        <img src="static/content/planeta5.png" id="planeta5" height="100%" class="planety">
-      </div> 
-      --> 
-
     </span>
-          
-      <a href=""><input type="button"  class="button" value="WYBIERZ PLANETĘ!{{planet}}"/></a>
-          
-  </div>
-
-
-
+     
+</section>
 
 <div id="stopka">
 <footer>
-  Copywrights by <a target="blank" href="https://github.com/sermarcel"> Marcin Brz </a>
+  Copywrights by <a target="blank" href="https://github.com/KamilaSieczkowska"> Kamila Sieczkowska </a>
 </footer>
 </div>
 
